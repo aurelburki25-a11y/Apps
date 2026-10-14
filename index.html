@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unser Webprojekt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== Gesamte Überschrift + Navigationsleiste ===== -->
+    <header id="seitenkopf">
+        <h1 id="haupttitel">Unser Webprojekt</h1>
+        <nav id="navigation">
+            <button class="nav-knopf aktiv" data-ziel="start">Startseite</button>
+            <button class="nav-knopf" data-ziel="felix">Felix</button>
+            <button class="nav-knopf" data-ziel="anja">Anja</button>
+            <button class="nav-knopf" data-ziel="mathe">Mathetest</button>
+            <button class="nav-knopf" data-ziel="eatweb">EatWeb</button>
+        </nav>
+    </header>
+
+    <!-- ===== Startseite ===== -->
+    <section id="start" class="teil sichtbar">
+        <h2>Willkommen!</h2>
+        <p>Wähle oben aus, welchen Teil der Webseite du sehen willst.</p>
+        <div class="kachel-reihe">
+            <div class="kachel" data-ziel="felix">
+                <h3>Felix</h3>
+                <p>Persönliche Seite</p>
+            </div>
+            <div class="kachel" data-ziel="anja">
+                <h3>Anja</h3>
+                <p>Eine Biographie</p>
+            </div>
+            <div class="kachel" data-ziel="mathe">
+                <h3>Mathetest</h3>
+                <p>Rechenaufgaben üben</p>
+            </div>
+            <div class="kachel" data-ziel="eatweb">
+                <h3>EatWeb</h3>
+                <p>Tageskarte &amp; Speisekarte</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Teil 1: Personal Web Page (Felix) ===== -->
+    <section id="felix" class="teil">
+        <h1 style="text-align:center">My Personal Page</h1>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ddd'/><circle cx='50' cy='38' r='18' fill='%23888'/><path d='M18 86a32 26 0 0 1 64 0' fill='%23888'/></svg>" width="100" height="100" alt="Profilbild">
+        <hr>
+        <p style="text-align:left">
+            <h2 style="text-align:center">Felix Hartenauer</h2>
+            Ich bin 15 Jahre alt und gehe in die 10. Klasse.<br> Meine Interessen sind Informatik und Mathematik.
+        </p>
+        <hr>
+        <a href="https://www.google.com" target="_blank">Google</a>
+    </section>
+
+    <!-- ===== Teil 2: Eine Biographie (Anja) ===== -->
+    <section id="anja" class="teil">
+        <div class="karte">
+
+            <h1 class="mix">Eine Biographie</h1>
+
+            <h2>Anja M.</h2>
+
+            <img
+                src="https://tse1.mm.bing.net/th/id/OIP.H1nKJGuR43yw24jwslwXwgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="Bild von Anja M."
+            >
+
+            <ul>
+                <li><strong>Name:</strong> Anja</li>
+                <li><strong>Alter:</strong> 16 Jahre</li>
+                <li><strong>Wohnort:</strong> in der Nähe von Frankfurt</li>
+                <li><strong>Beruf:</strong> Schülerin</li>
+            </ul>
+
+            <p>
+                Anja ist Schülerin eines Beruflichen Gymnasiums
+                in der Nähe von Frankfurt.
+            </p>
+
+            <p>
+                Dort belegt sie das Schwerpunktfach Wirtschaft Bilingual.
+            </p>
+
+            <a href="#start" data-ziel="start"><button>Zurück zur Startseite</button></a>
+        </div>
+    </section>
+
+    <!-- ===== Teil 3: Mathetest ===== -->
+    <section id="mathe" class="teil">
+        <header>
+            <h1>Mathetest</h1>
+        </header>
+
+        <section id="about">
+            <h2>Über uns</h2>
+            <p>Wir machen Mathe leichter: Hier bekommst du zufällige Rechenaufgaben mit Plus, Minus und Mal und kannst so üben, bis du sicher bist.</p>
+        </section>
+
+        <main>
+            <h2>Quiz</h2>
+            <p id="frage"></p>
+            <input type="number" id="antwort" placeholder="Deine Antwort">
+            <button onclick="neueFrage()">Neue Frage</button>
+            <button onclick="pruefen()">Antwort abschicken</button>
+            <p id="ergebnis"></p>
+        </main>
+
+        <img src="https://image.geo.de/30086896/t/Pt/v3/w1440/r0/-/einstein-gross-jpg--41890-.jpg" alt="Albert Einstein">
+    </section>
+
+    <!-- ===== Teil 4: EatWeb ===== -->
+    <section id="eatweb" class="teil">
+        <nav>
+            <a href="#Tageskarte">Tageskarte</a>
+            <a href="../../Praktikum/Schulapp.html">Zahlung</a>
+            <a href="#Speisekarte">Speisekarte</a>
+            <a href="#Getränke">Getränke</a>
+            <a href="#Speisen">Speisen</a>
+        </nav>
+        <h1>EatWeb</h1>
+        <button id="begrüßung">Willkommen</button>
+        <button id="zufall">Was soll ich essen?</button>
+        <p class="special">unser essen schmeckt ganz Nett!</p>
+
+        <h2 id="Tageskarte">Tageskarte:</h2>
+
+        <p class="gericht">Big Mac – 4,50 €</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSPiiC8L7Dq6tLWfut6i85wRlDcqIke0NK9bi67sH4VWLd6wq2GPxhGEP8fr_jhYgiSAzhtb4ADqJmButCpFXp0t2GSVFBHX237cwONlQKA&s=10" alt="Big Mac">
+
+        <p class="gericht">Schnitzelbrötchen – 3,50 €</p>
+        <img src="https://www.the-bbq-bear.de/images/cropped-aaaab.protected.jpg" alt="Schnitzelbrötchen">
+
+        <p class="gericht">Pizza Peperoni – 4,00 €</p>
+        <img src="https://www.eatfreda.com/cdn/shop/files/Pepperonineu_1.png?v=1770649580&width=2048" alt="Pizza Peperoni">
+
+        <h2 id="Speisekarte">Speisekarte:</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSGcJwoIYQ220r5aIm3F8XZ0fbEyJCi8C8oujkLnYW5XRjgimFJVN8tMx1&s=10" alt="Speisekarte">
+
+        <h3 id="Getränke">Getränke:</h3>
+        <ul>
+            <li>Durstlöcher Pfirsich/Zitrone/Orange – 1,00 €</li>
+            <li>Wasser – 3,00 €</li>
+            <li>Apfelschorle – 1,50 €</li>
+            <li>Cola – 1,80 €</li>
+            <li>Fanta – 1,80 €</li>
+            <li>Sprite – 1,80 €</li>
+            <li>Kakao – 1,20 €</li>
+            <li>Kaffee – 1,50 €</li>
+        </ul>
+
+        <h3 id="Speisen">Speisen:</h3>
+        <ul>
+            <li>Belegtes Brötchen Käse/Salami/Schinken – 2,20 €</li>
+            <li>Laugenbrezel – 1,00 €</li>
+            <li>Pizzaschnecke – 1,80 €</li>
+            <li>Schnitzelbrötchen – 3,50 €</li>
+            <li>Nudeln mit Tomatensoße – 3,80 €</li>
+            <li>Currywurst mit Pommes – 4,50 €</li>
+            <li>Salat – 3,00 €</li>
+            <li>Obstbecher – 2,00 €</li>
+        </ul>
+        <a href="../../Praktikum/Schulapp.html">Zahlungsmethoden</a>
+    </section>
+
+    <footer id="fusszeile">
+        <p>Webprojekt – Felix, Anja, Mathetest &amp; EatWeb</p>
+    </footer>
+
+    <script src="mathe.js"></script>
+    <script src="hallo.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
